@@ -7,6 +7,11 @@ homepage = "https://github.com/Christopher22/fsort.git"
 license = "MIT"
 readme = "README.md"
 description = "fsort is a crate to sort files in a fast, OS-independent and 'rusty' way."
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md"
+]
 
 [lib]
 name = "fsort"
