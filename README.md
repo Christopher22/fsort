@@ -1,4 +1,4 @@
-# fsort
+# fsort [![Build Status](https://travis-ci.org/Christopher22/fsort.svg?branch=master)](https://travis-ci.org/Christopher22/fsort)
 fsort is a crate to sort files in a fast, OS-independent and 'rusty' way.
 
 ## Features
