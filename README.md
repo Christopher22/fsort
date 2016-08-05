@@ -1,6 +1,9 @@
 # fsort [![Build Status](https://travis-ci.org/Christopher22/fsort.svg?branch=master)](https://travis-ci.org/Christopher22/fsort)
 fsort is a crate to sort files in a fast, OS-independent and 'rusty' way.
 
+## Documentation
+[Documentation on GitHub](https://christopher22.github.io/fsort/fsort/)
+
 ## Features
 - Easy sorting
 - Many criteria: Name, size, creation date, access date, ...
@@ -9,38 +12,26 @@ fsort is a crate to sort files in a fast, OS-independent and 'rusty' way.
 
 ## Example
 ```rust
-use std::fs::File;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use fsort::criterion::{FileName, FileSize};
 use fsort::file_collection::{FileCollection, DynamicCollection};
 
 fn main() {
 
-  // Create temporal files
-  let mut s1 = std::env::temp_dir();
-  let mut s2 = std::env::temp_dir();
-  s1.push("S1.tmp");
-  s2.push("S2.tmp");
-  File::create(&s1).unwrap().set_len(10);
-  File::create(&s2).unwrap().set_len(5);
-
-  // Inserts files into collection
+  // Create a dynamic collection
   let mut collection = DynamicCollection::new::<FileName>();
-  collection.add_file(&s2);
-  collection.add_file(&s1);
-
-  // Sort files by name and iterate over the paths
-  let mut iter_name = collection.path_iter();
-  assert_eq!(s1, iter_name.next().unwrap());
-  assert_eq!(s2, iter_name.next().unwrap());
-  assert_eq!(None, iter_name.next());
-
-  // Change sort criterion and iterate again
+  
+  // Add paths
+  collection.add_file(&Path::new("a_file.tmp").to_owned());
+  collection.add_file(&Path::new("another_file.tmp").to_owned());
+  
+  // Files are now sorted by name... Well, change crition to size.
   collection.set_criterion::<FileSize>();
-  let mut iter_size = collection.path_iter();
-  assert_eq!(s2, iter_size.next().unwrap());
-  assert_eq!(s1, iter_size.next().unwrap());
-  assert_eq!(None, iter_size.next());
+  
+  // Iterate sorted files
+  for path in collection {
+     // Do fancy things with the PathBuf...
+  }
 }
 ```
 ##Author
