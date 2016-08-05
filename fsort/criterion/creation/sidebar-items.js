@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CreationDate","A criterion which sorts files by their dates of creation. # Examples"]]});

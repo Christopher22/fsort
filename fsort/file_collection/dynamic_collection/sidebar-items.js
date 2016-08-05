@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["DynamicCollection","A sorted collection of files with changeable criterion."]]});

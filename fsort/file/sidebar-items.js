@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["File","A file which could be sorted according to a specific criterion."]]});

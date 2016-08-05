@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FileIter","An iterator over the files in a `FileCollection` according to the requested order."]]});

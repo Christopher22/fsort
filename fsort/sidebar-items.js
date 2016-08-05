@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Order","The order of the sorting algorithm."]],"mod":[["criterion","This module contains different criteria for sorting files."],["file_collection","This modules contains the sorted `FileCollection`s and their iterators."]],"struct":[["File","A file which could be sorted according to a specific criterion."]]});

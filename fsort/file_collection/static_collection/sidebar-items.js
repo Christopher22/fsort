@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["StaticCollection","A sorted collection of files with fixed criterion."]]});

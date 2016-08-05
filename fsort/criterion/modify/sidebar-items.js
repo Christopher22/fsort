@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ModifyDate","A criterion which sorts files by their last dates of modify."]]});

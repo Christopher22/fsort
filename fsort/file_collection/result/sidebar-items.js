@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Result","The enum describes the result of a file adding operation."]]});

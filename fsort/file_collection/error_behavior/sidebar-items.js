@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ErrorBehavior","This enum describes the behavior of a sorting algorithm in case of errors while adding files."]]});

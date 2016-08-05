@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FileSize","A criterion which sorts files by their size."]]});
